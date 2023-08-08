@@ -1,0 +1,10 @@
+/node_modules
+.env
+*.log
+/tmp
+/.vscode
+/dist
+.npmrc
+.eslintrc.json
+.sonar_lock
+report-task.txt

@@ -1,0 +1,157 @@
+{
+   "openapi": "3.0.0",
+   "info": {
+      "title": "Project API Documentation",
+      "contact": {
+         "name": "X"
+      },
+      "version": "3.1.0"
+   },
+   "servers": [
+      {
+         "description": "Local",
+         "url": "{schema}://localhost:4000/",
+         "variables": {
+            "schema": {
+               "enum": [
+                  "http"
+               ],
+               "default": "http"
+            }
+         }
+      },
+      {
+         "description": "Staging",
+         "url": "{schema}://server.com/",
+         "variables": {
+            "schema": {
+               "enum": [
+                  "https"
+               ],
+               "default": "https"
+            }
+         }
+      }
+   ],
+   "paths": {
+      "/api/auth/login": {
+         "post": {
+            "tags": [
+               "Auth"
+            ],
+            "summary": "Login to the account",
+            "operationId": "login",
+            "requestBody": {
+               "content": {
+                  "application/json": {
+                     "schema": {
+                        "$ref": "#/components/schemas/UserLogInRequest"
+                     }
+                  }
+               }
+            },
+            "responses": {
+               "200": {
+                  "description": "Success",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/UserLogInResponse"
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/APIErrorResponse"
+                        }
+                     }
+                  }
+               }
+            },
+            "security": [
+               {
+                  "USER_ACCESS_TOKEN": []
+               }
+            ]
+         }
+      },
+      "/api/dashboard/user/logout": {
+         "post": {
+            "tags": [
+               "Auth"
+            ],
+            "summary": "Logout current user",
+            "operationId": "logout",
+            "responses": {
+               "200": {
+                  "description": "Success",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/APIErrorResponse"
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/APIErrorResponse"
+                        }
+                     }
+                  }
+               }
+            },
+            "security": [
+               {
+                  "USER_ACCESS_TOKEN": []
+               }
+            ]
+         }
+      }
+   },
+   "components": {
+      "schemas": {
+         "APIErrorResponse": {
+            "type": "object",
+            "properties": {
+               "title": {
+                  "type": "string"
+               },
+               "message": {
+                  "type": "string",
+                  "description": "Fail message"
+               },
+               "code": {
+                  "type": "number"
+               }
+            }
+         }
+      },
+      "securitySchemes": {
+         "USER_ACCESS_TOKEN": {
+            "description": "JW user access token",
+            "type": "apiKey",
+            "name": "user-access-token",
+            "in": "header"
+         }
+      },
+      "security": [
+         {
+            "USER_ACCESS_TOKEN": []
+         }
+      ],
+      "tags": [
+         {
+            "name": "Core Functionality",
+            "description": "Core API"
+         }
+      ]
+   }
+}
