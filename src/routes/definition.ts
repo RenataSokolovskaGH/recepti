@@ -35,20 +35,6 @@ const routes = {
     auth: {
         login: `${apiRoute}/auth/login`,
     },
-    dashboard: {
-        root: `${apiRoute}/dashboard/*`,
-        user: {
-            root: `${apiRoute}/dashboard/user/*`,
-            changeUserPassword: `${apiRoute}/dashboard/user/change-user-password`,
-            getUserProfile: `${apiRoute}/dashboard/user/get-user-profile`,
-            editUserProfile: `${apiRoute}/dashboard/user/edit-user-profile`,
-            setProfileAvatar: `${apiRoute}/dashboard/user/set-profile-avatar`,
-            removeProfileAvatar: `${apiRoute}/dashboard/user/remove-profile-avatar`,
-            logout: `${apiRoute}/dashboard/user/logout`,
-        }
-    }
-
-
 };
 const sensitiveApis: Map<string, ISensitiveApiStruct> = new Map(
     [

@@ -1,15 +1,18 @@
 import { JSONSchema, Model } from 'objection';
 import { dbModels } from '../db/db-models';
 
-export class Credentials extends Model {
-    user_id: number;
-    hash: string;
-    salt: string;
+export class MatchingRecipes extends Model {
+    id: number;
+    recipes_id: number;
+    matching_recipes_id: number;
+   
+
     created_at: string;
     updated_at: string;
 
+
     static get tableName() {
-        return dbModels.credentials.tableName;
+        return dbModels.matchingRecipes.tableName;
     }
 
     static get jsonSchema(): JSONSchema {
@@ -17,11 +20,11 @@ export class Credentials extends Model {
             type: 'object',
             properties: {
                 id: { type: 'integer' },
-                user_id: { type: 'integer' },
-                hash: { type: 'string' },
-                salt: { type: 'string' },
+                recipes_id: { type: 'integer' },
+                matching_recipes_id: { type: 'integer' },
+
                 created_at: { type: 'string' },
-                updated_at: { type: 'string' },
+                updated_at: { type: 'string' }
             }
         };
     }

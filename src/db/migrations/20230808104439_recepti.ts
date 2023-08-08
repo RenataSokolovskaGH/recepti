@@ -1,10 +1,42 @@
-import { Knex } from "knex";
+import { dbModels } from '../db-models'
+import { Knex } from 'knex';
+import { commonConstants } from '../../constants';
 
+const tableName = dbModels.recipes.tableName;
 
-export async function up(knex: Knex): Promise<void> {
+exports.up = async (knex: Knex) => {
+    const updateStamp = knex.raw(
+        'CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'
+    );
+
+    if (!await knex.schema.hasTable(tableName)) {
+        await knex.schema.createTable(
+            tableName,
+            t => {
+                t.increments('id').primary();
+                t.string('name').notNullable().index();
+
+                t.string('ingredients', dbModels.recipes.length.ingredients).notNullable().index();
+                t.string('allergens').index();
+                t.string('avatar');
+                t.string('description').notNullable();
+                t.boolean('is_sweet').notNullable().index();
+
+                t.timestamp('created_at').notNullable().defaultTo(knex.fn.now());
+                t.timestamp('updated_at').notNullable().defaultTo(updateStamp);
+            }
+        )
+    }
 }
 
+exports.down = async (knex: Knex) => {
+    if (!commonConstants.db.grantUnsafeMigration) {
+        return;
+    }
 
-export async function down(knex: Knex): Promise<void> {
+    await knex.schema.hasTable(tableName).then((exists: boolean) => {
+        if (exists) {
+            return knex.schema.dropTable(tableName);
+        }
+    });
 }
-

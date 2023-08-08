@@ -1,8 +1,6 @@
 import { Fields, Files } from "formidable";
-import { EStatuses, ESystemLoggerFlags, EUserAccountType, EUserActivityType } from './enums';
+import { EStatuses } from './enums';
 import { Express, Router, RequestHandler, Request } from 'express';
-import { KnownUsersSessions, User } from "./models";
-import { Transaction } from "objection";
 import { TAlterDBCandidate } from "./types";
 import { Knex } from "knex";
 
@@ -74,18 +72,6 @@ export interface IPaginationInput {
     pageSize: number;
 }
 
-export interface IObjectifySystemErrorParams {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    message: any,
-    service: string,
-    type?: ESystemLoggerFlags;
-    includeSeparator?: boolean;
-}
-
-export interface ISystemLoggerParams extends IObjectifySystemErrorParams {
-    clientId?: string;
-}
-
 export interface IAPIErrorSchema {
     title: string,
     message: string,
@@ -110,117 +96,4 @@ export interface ICreateServerInstanceParams {
     port: number;
     swaggerURI?: string;
     environment: string | undefined;
-}
-
-export interface IAssignAndAnalyzeFailedLoginAttemptParams {
-    req?: Request;
-    clientIp: string;
-    userName?: string;
-    status: EStatuses;
-    user?: User;
-}
-
-export interface IKnownUserSessionParams {
-    userId: number,
-    knownSessionId?: number | null,
-    mustBeVerified?: boolean,
-    userAgent?: string,
-    ipAddress?: string,
-}
-
-export interface IDetermineUserKnownSessionParams {
-    user: User;
-    client: IIncomingClientConfig;
-    req: Request;
-}
-
-export interface IDetermineUserKnownSessionState {
-    knownSession: KnownUsersSessions;
-}
-
-export interface ILogUserActivityParams {
-    userId: number;
-    activityType: EUserActivityType;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    metadata: Record<string, any> | null;
-}
-
-export interface IInsertNewUserSessionParams {
-    req: Request;
-    user: User;
-    userAccessToken: string;
-    knownSessionId: number;
-}
-
-export interface IUserInputSchema {
-    userName: string;
-    firstName?: string;
-    lastName?: string;
-    jobTitle?: string;
-    email?: string;
-    password: string;
-    accountType: EUserAccountType;
-}
-
-export interface IAdminInsertNewUser extends IUserInputSchema {
-    hash: string;
-    salt: string;
-}
-
-export interface IExternalTrx {
-    externalTrx: Transaction;
-}
-
-export interface ISpaceDeleteFileParams {
-    userId?: number;
-    staticFileUrl?: string;
-    fileId?: number;
-}
-
-export interface IAvatarSavingParams {
-    newfileDir: string;
-    newFileHash?: string;
-    fileType: string | null;
-    oldfilePath: string;
-    needThumbnail?: boolean;
-    userId?: number;
-    fileSize?: number;
-    generateUrlWithDomain: boolean;
-}
-
-export interface ISaveFileToSpaceSchema {
-    localFileUrl: string;
-    localFilePath: string;
-    localFileId: number;
-}
-
-export interface IInsertNewSpaceFileParams extends ISpaceFileSavingParams {
-    fileChecksum: string;
-    fullFilePath?: string;
-}
-
-export interface IGetUniqueFileNameParams {
-    fileDir: string;
-    fileName: string;
-}
-
-export interface IResizeLocalImageParams {
-    imageFile: string;
-    outFilePath: string;
-    outFileName: string;
-}
-
-export interface IWriteFileFromBufferParams {
-    checksum: string;
-    fileSize: number;
-}
-
-export interface IGenerateStaticFileUrlParams extends IProxiedRoute {
-    fileHash: string;
-    fileType: string;
-    includeDomain: boolean;
-}
-
-export interface ISpaceFileSavingParams extends IAvatarSavingParams {
-    fileName?: string | null,
 }

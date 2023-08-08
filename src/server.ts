@@ -1,12 +1,10 @@
 import express from 'express';
 import { router } from './routes';
 import knex from './db/knex';
-import { loggerHelper, serverHelper } from './helpers';
-import { checkSourceBlocked, applyBruteforcePrevention } from './middleware/';
+import { serverHelper } from './helpers';
 import { authController } from './controllers';
 import { routeConstants } from './routes/definition';
 import { sysEnvironment } from './constants';
-import { ESystemLoggerFlags } from './enums';
 
 const allRoutes = routeConstants.getAllRoutes(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -42,10 +40,6 @@ export const bootstrap = async (
             app
         )
 
-        app.use(checkSourceBlocked);
-
-        app.use(applyBruteforcePrevention);
-
         app.use('/', router);
 
         serverHelper.attachErrorHandler(
@@ -54,13 +48,6 @@ export const bootstrap = async (
         )
 
     } catch (err) {
-        loggerHelper.objectifySystemError(
-            {
-                message: err,
-                service: 'bootstrap',
-                type: ESystemLoggerFlags.Fatal,
-                includeSeparator: true
-            }
-        )
+       
     }
 }

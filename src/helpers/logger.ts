@@ -1,9 +1,3 @@
-import { AccessLog, UserActivityLog } from '../models';
-import { resolverHelper } from '.';
-import { dbModels } from '../db/db-models';
-import { Request } from 'express';
-import { IIncomingClientConfig, ILogUserActivityParams, IObjectifySystemErrorParams, ISystemLoggerParams } from '../interfaces';
-import { EStatuses, ESystemLoggerFlags } from '../enums';
 import { verboseMode } from '../constants';
 
 class LoggerHelper {
@@ -104,26 +98,6 @@ class LoggerHelper {
         )
     }
 
-    async logUserActivity(
-        {
-            userId,
-            activityType,
-            metadata
-
-        }: ILogUserActivityParams
-
-    ): Promise<void> {
-        await UserActivityLog
-            .query()
-            .insert(
-                {
-                    user_id: userId,
-                    activity_type: `${activityType}`,
-                    metadata: metadata
-                }
-            )
-    }
-
     private getCommandTypeStyle(
         type: ESystemLoggerFlags
 
@@ -163,44 +137,6 @@ class LoggerHelper {
         return style;
     }
 
-    async accessLogger(
-        req: Request,
-        status: EStatuses,
-        userId?: number | null,
-
-    ) {
-        const client: IIncomingClientConfig = {
-            ip: resolverHelper.getClientIP(req),
-            ua: req.get('user-agent'),
-            route: req.originalUrl
-        }
-
-        try {
-            await AccessLog
-                .query()
-                .insert(
-                    {
-                        ip: client.ip,
-                        user_agent: client.ua?.substring(0, dbModels.accessLog.length.userAgent),
-                        route: client.route?.substring(0, dbModels.accessLog.length.route),
-                        user_id: userId,
-                        status,
-                    }
-                )
-
-        } catch (err) {
-            this.systemLogger(
-                {
-                    message: 'Failed to log client access.',
-                    service: 'accessLogger',
-                    type: ESystemLoggerFlags.Error
-                }
-            )
-
-            throw err;
-        }
-    }
-
     createLoggerSeparator(
         symbols: string[] = ['=', '+'],
         length = 101
@@ -214,33 +150,6 @@ class LoggerHelper {
             );
         }
         return output.join('');
-    }
-
-    objectifySystemError(
-        {
-            message: err,
-            service: errorDesc,
-            type,
-            includeSeparator
-
-        }: IObjectifySystemErrorParams
-
-    ): void {
-        this.systemLogger(
-            {
-                message: typeof err === 'object'
-                    ? JSON.stringify(
-                        err,
-                        null,
-                        2
-                    )
-                    : err as string,
-
-                service: errorDesc,
-                type,
-                includeSeparator
-            }
-        );
     }
 }
 

@@ -5,12 +5,10 @@ import { Knex } from 'knex';
 import userAgent from 'express-useragent';
 import compression from 'compression';
 import cors from 'cors';
-import { loggerHelper, storageHelper } from '.';
 import { join } from 'path';
 import {
     EStatuses,
-    ESystemEnv,
-    ESystemLoggerFlags
+   
 } from '../enums';
 import {
     IAPIErrorSchema,
@@ -32,29 +30,12 @@ class ServerHelper {
                 knex.raw('select version() as DB_version')
                     .then(
                         version => {
-                            loggerHelper.systemLogger(
-                                {
-                                    message: `DB connection established. ${JSON.stringify(
-                                        version[0][0]
-
-                                    )}`,
-                                    service: 'knex'
-                                }
-                            )
-
+                          
                             resolve();
                         }
                     )
                     .catch(
-                        err => {
-                            loggerHelper.objectifySystemError(
-                                {
-                                    message: err,
-                                    service: 'knex',
-                                    type: ESystemLoggerFlags.Error
-                                }
-                            )
-
+                        err => {                           
                             knex.destroy();
 
                             reject();
@@ -131,10 +112,7 @@ class ServerHelper {
                 ) {
                     res.send(errorCodes.ApiRouteNotFound);
 
-                    loggerHelper.accessLogger(
-                        req,
-                        EStatuses.NotFound
-                    );
+                   
 
                 } else {
                     let {
@@ -143,20 +121,7 @@ class ServerHelper {
                         // eslint-disable-next-line prefer-const
                         code = '255'
 
-                    } = error;
-
-                    if ([
-                        ESystemEnv.Production.toString(),
-                        ESystemEnv.Prem
-
-                    ].includes(sysEnvironment)
-
-                    ) {
-                        if (code === '255') {
-                            title = 'Internal server error';
-                            message = 'Concealed';
-                        }
-                    }
+                    } = error;                   
 
                     res.status(
                         error.code === '255'
@@ -186,9 +151,7 @@ class ServerHelper {
         }: IInitializeSwaggerModuleParams
 
     ): void {
-        const isSwaggerOn = sysEnvironment !==
-            ESystemEnv.Prem && process.env.IS_SWAGGER_ENABLE?.toLocaleLowerCase() ===
-            'true';
+        const isSwaggerOn = process.env.IS_SWAGGER_ENABLE?.toLocaleLowerCase() === 'true';
 
         if (isSwaggerOn) {
             try {
@@ -196,16 +159,6 @@ class ServerHelper {
                     process.cwd(),
                     swaggerImportPath
                 )
-
-                if (verboseMode) {
-                    loggerHelper.systemLogger(
-                        {
-                            message: `Swagger import path: ${swaggerImportPath}`,
-                            service: 'swaggerInit',
-                            type: ESystemLoggerFlags.Debug
-                        }
-                    )
-                }
 
                 const {
                     swaggerUi,
@@ -230,15 +183,7 @@ class ServerHelper {
                     )
                 )
 
-            } catch (err) {
-                loggerHelper.systemLogger(
-                    {
-                        message: 'Failed to initiate Swagger module',
-                        service: 'swaggerInit',
-                        type: ESystemLoggerFlags.Fatal,
-                        includeSeparator: true
-                    }
-                )
+            } catch (err) {              
             }
         }
     }
@@ -253,8 +198,6 @@ class ServerHelper {
         }: ICreateServerInstanceParams
 
     ): http.Server {
-        storageHelper.clearTempFolder();
-
         return http
             .createServer(app)
             .listen(
