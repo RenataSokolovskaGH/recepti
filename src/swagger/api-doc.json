@@ -193,6 +193,10 @@
                "dietFlag": {
                   "$ref": "#/components/schemas/DietFlag"
                },
+               "avatar": {
+                  "type": "string",
+                  "example": "avatar url"
+               },
                "isSweet": {
                   "type": "boolean",
                   "default": false

@@ -8,12 +8,13 @@ export interface IInitializeSwaggerModuleParams {
     swaggerImportPath?: string;
 }
 
-export interface IAvatarSchema {
-    avatarUrl: string | null;
-    thumbnailUrl: string | null;
+export interface IGetRecipesParams {
+    name: string;
+    calories: number;
+    dietFlag: EDietFlag;
+    isSweet: boolean;
+    ingredients: string;
 }
-
-export interface IGetRecipesParams extends IRecipeSchema { }
 
 export interface RGetRecipeDetails {
     recipeDetails: IRecipeDetailsSchema;
@@ -24,12 +25,8 @@ export interface IRecipeDetailsSchema extends IRecipeSchema {
     makingProcedure: string;
 }
 
-export interface IRecipeSchema {
-    name: string;
-    calories: number;
-    dietFlag: EDietFlag;
-    isSweet: boolean;
-    ingredients: string;
+export interface IRecipeSchema extends IGetRecipesParams {
+    avatar: string | null;
 }
 
 export interface RGetRecipes {
