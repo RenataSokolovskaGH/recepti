@@ -1,4 +1,5 @@
-import { IGetRecipesParams, RGetRecipes } from "../interfaces";
+import { errorCodes } from "../error-codes";
+import { IGetRecipesParams, RGetRecipeDetails, RGetRecipes } from "../interfaces";
 import { Recipes } from "../models";
 
 class DashboardCtl {
@@ -49,6 +50,27 @@ class DashboardCtl {
 
         return {
             recipes: myRecipes.map(q => q.recipeSchema())
+        }
+    }
+
+    public async getRecipeDetails(
+        recipeId: number
+
+    ): Promise<RGetRecipeDetails> {
+        const myRecipe = await Recipes
+            .query()
+            .findOne(
+                {
+                    id: recipeId
+                }
+            )
+
+        if (!myRecipe) {
+            throw errorCodes.InvalidRecipe;
+        }
+
+        return {
+            recipeDetails: myRecipe.recipeDetailsSchema()
         }
     }
 }

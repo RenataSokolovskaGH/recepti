@@ -1,7 +1,7 @@
 import { JSONSchema, Model } from 'objection';
 import { dbModels } from '../db/db-models';
 import { EDietFlag } from '../enums';
-import { IRecipeSchema } from '../interfaces';
+import { IRecipeDetailsSchema, IRecipeSchema } from '../interfaces';
 
 export class Recipes extends Model {
     id: number;
@@ -9,6 +9,7 @@ export class Recipes extends Model {
     ingredients: string;
     avatar: string | null;
     calories: number;
+    making_procedure: string;
     diet_flag: EDietFlag;
     description: string;
     is_sweet: boolean;
@@ -29,6 +30,7 @@ export class Recipes extends Model {
                 ingredients: { type: 'string' },
                 diet_flag: { type: 'string' },
                 calories: { type: 'integer' },
+                making_procedure: { type: 'string' },
                 avatar: { type: ['string', 'null'] },
                 description: { type: 'string' },
                 is_sweet: { type: 'boolean' },
@@ -48,6 +50,16 @@ export class Recipes extends Model {
             ingredients: this.ingredients,
             isSweet: this.is_sweet,
             name: this.name
+        }
+    }
+
+    recipeDetailsSchema(
+
+    ): IRecipeDetailsSchema {
+        return {
+            ...this.recipeSchema(),
+            description: this.description,
+            makingProcedure: this.making_procedure
         }
     }
 }

@@ -15,6 +15,15 @@ export interface IAvatarSchema {
 
 export interface IGetRecipesParams extends IRecipeSchema { }
 
+export interface RGetRecipeDetails {
+    recipeDetails: IRecipeDetailsSchema;
+}
+
+export interface IRecipeDetailsSchema extends IRecipeSchema {
+    description: string;
+    makingProcedure: string;
+}
+
 export interface IRecipeSchema {
     name: string;
     calories: number;

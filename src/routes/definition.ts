@@ -24,7 +24,8 @@ const routes = {
     apiRoute,
     swaggerURI: '/__swagger',
     dashboard: {
-        getRecipes: `${apiRoute}/api/dashboard/get-recipes`
+        getRecipes: `${apiRoute}/api/dashboard/get-recipes`,
+        getRecipeDetails: `${apiRoute}/api/dashboard/get-recipe-details`,
     }
 };
 

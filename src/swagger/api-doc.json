@@ -61,6 +61,46 @@
                }
             }
          }
+      },
+      "/api/dashboard/get-recipe-details": {
+         "post": {
+            "tags": [
+               "Dashboard"
+            ],
+            "summary": "Get a full overview of a certain recipe",
+            "operationId": "getRecipeDetails",
+            "requestBody": {
+               "content": {
+                  "application/json": {
+                     "schema": {
+                        "$ref": "#/components/schemas/GetRecipeDetailsRequest"
+                     }
+                  }
+               }
+            },
+            "responses": {
+               "200": {
+                  "description": "Success",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/GetRecipeDetailsResponse"
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/APIErrorResponse"
+                        }
+                     }
+                  }
+               }
+            }
+         }
       }
    },
    "components": {
@@ -84,7 +124,8 @@
             "type": "object",
             "properties": {
                "name": {
-                  "type": "string"
+                  "type": "string",
+                  "example": "Pizza meksikana"
                },
                "calories": {
                   "type": "number",
@@ -108,15 +149,41 @@
             "type": "object",
             "properties": {
                "recipes": {
-                  "$ref": "#/components/schemas/RecipeSchema"
+                  "type": "array",
+                  "items": {
+                     "$ref": "#/components/schemas/RecipeSchema"
+                  }
+               }
+            }
+         },
+         "GetRecipeDetailsRequest": {
+            "type": "object",
+            "properties": {
+               "recipeId": {
+                  "type": "number",
+                  "example": 27
+               }
+            }
+         },
+         "GetRecipeDetailsResponse": {
+            "type": "object",
+            "properties": {
+               "recipeDetails": {
+                  "$ref": "#/components/schemas/RecipeDetailsSchema"
                }
             }
          },
          "RecipeSchema": {
             "type": "object",
             "properties": {
+               "recipeId": {
+                  "type": "number",
+                  "format": "integer",
+                  "example": 27
+               },
                "name": {
-                  "type": "string"
+                  "type": "string",
+                  "example": "Pizza meksikana"
                },
                "calories": {
                   "type": "number",
@@ -135,6 +202,26 @@
                   "example": "tomato, mushrooms"
                }
             }
+         },
+         "RecipeDetailsSchema": {
+            "allOf": [
+               {
+                  "$ref": "#/components/schemas/RecipeSchema"
+               },
+               {
+                  "type": "object",
+                  "properties": {
+                     "description": {
+                        "type": "string",
+                        "example": "This is one beautiful recipe and you should definitely try it"
+                     },
+                     "makingProcedure": {
+                        "type": "string",
+                        "example": "This is a step by step guide how to make this wonderful meal"
+                     }
+                  }
+               }
+            ]
          },
          "DietFlag": {
             "type": "string",

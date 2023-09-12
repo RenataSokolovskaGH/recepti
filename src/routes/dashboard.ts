@@ -32,5 +32,27 @@ export default {
         } catch (err) {
             next(err);
         }
-    }
+    },
+
+    getRecipeDetails: async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+
+    ) => {
+        try {
+            const {
+                recipeId
+
+            } = req.body;
+
+            const result = await dashCtl.getRecipeDetails(
+                recipeId
+            )
+            res.status(200).json(result);
+
+        } catch (err) {
+            next(err);
+        }
+    },
 }

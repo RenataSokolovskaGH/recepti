@@ -17,7 +17,12 @@ export const errorCodes = {
     },
     ProblemWithProcessing: {
         title: "Problem With Processing",
-        message: "Problem with processing current operation.",
+        message: "Problem with processing current operation",
         code: 'e_8',
     },
+    InvalidRecipe: {
+        title: "Invalid Recipe",
+        message: "Certain recipe could not be found on the system",
+        code: 'e_9',
+    }
 }
