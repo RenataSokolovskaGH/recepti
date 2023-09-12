@@ -6,17 +6,14 @@ import userAgent from 'express-useragent';
 import compression from 'compression';
 import cors from 'cors';
 import { join } from 'path';
-import {
-    EStatuses,
-   
-} from '../enums';
+
 import {
     IAPIErrorSchema,
     ICreateServerInstanceParams,
     IInitializeSwaggerModuleParams
 } from '../interfaces';
 import { errorCodes } from '../error-codes';
-import { sysEnvironment, verboseMode } from '../constants';
+import { logger } from './logger';
 
 class ServerHelper {
     async createDBConnectionInstance(
@@ -30,15 +27,15 @@ class ServerHelper {
                 knex.raw('select version() as DB_version')
                     .then(
                         version => {
-                          
-                            resolve();
+                            logger('DB connection established')
+                            return resolve();
                         }
                     )
                     .catch(
-                        err => {                           
+                        err => {
                             knex.destroy();
 
-                            reject();
+                            reject(err);
                         }
                     );
             }
@@ -112,7 +109,7 @@ class ServerHelper {
                 ) {
                     res.send(errorCodes.ApiRouteNotFound);
 
-                   
+
 
                 } else {
                     let {
@@ -121,7 +118,7 @@ class ServerHelper {
                         // eslint-disable-next-line prefer-const
                         code = '255'
 
-                    } = error;                   
+                    } = error;
 
                     res.status(
                         error.code === '255'
@@ -142,8 +139,7 @@ class ServerHelper {
 
     initializeSwaggerModule(
         {
-            basicAuth,
-            customSiteTitle = "Digital Law Staging Swagger",
+            customSiteTitle = "API Swagger",
             router,
             swaggerUri,
             swaggerImportPath = 'dist/src/swagger'
@@ -151,49 +147,42 @@ class ServerHelper {
         }: IInitializeSwaggerModuleParams
 
     ): void {
-        const isSwaggerOn = process.env.IS_SWAGGER_ENABLE?.toLocaleLowerCase() === 'true';
+        try {
+            swaggerImportPath = join(
+                process.cwd(),
+                swaggerImportPath
+            )
 
-        if (isSwaggerOn) {
-            try {
-                swaggerImportPath = join(
-                    process.cwd(),
-                    swaggerImportPath
-                )
+            const {
+                swaggerUi,
+                swaggerDoc
 
-                const {
-                    swaggerUi,
-                    swaggerDoc
+                // eslint-disable-next-line @typescript-eslint/no-var-requires
+            } = require(
+                swaggerImportPath
+            )
 
-                    // eslint-disable-next-line @typescript-eslint/no-var-requires
-                } = require(
-                    swaggerImportPath
-                )
-
-                const swaggerOptions = {
-                    customSiteTitle
-                }
-
-                router.use(
-                    swaggerUri,
-                    basicAuth,
-                    swaggerUi.serve,
-                    swaggerUi.setup(
-                        swaggerDoc,
-                        swaggerOptions
-                    )
-                )
-
-            } catch (err) {              
+            const swaggerOptions = {
+                customSiteTitle
             }
-        }
+
+            router.use(
+                swaggerUri,
+                swaggerUi.serve,
+                swaggerUi.setup(
+                    swaggerDoc,
+                    swaggerOptions
+                )
+            )
+
+        } catch (err) { }
     }
 
     createServerInstance(
         {
             app,
             port,
-            swaggerURI,
-            environment
+            swaggerURI
 
         }: ICreateServerInstanceParams
 
@@ -204,28 +193,11 @@ class ServerHelper {
                 port,
                 'localhost',
                 () => {
-                    loggerHelper.systemLogger(
-                        {
-                            message: `Server listening on: http://localhost:${port}`,
-                            service: 'server'
-                        }
+                    logger(`Server listening on: http://localhost:${port}`);
+
+                    logger(
+                        `Swagger Docs runs on http://localhost:${port}${swaggerURI}`,
                     );
-
-                    if (
-                        environment ===
-                        ESystemEnv.Development
-
-                    ) {
-                        loggerHelper.systemLogger(
-                            {
-                                message: `Swagger Docs runs on http://localhost${port
-                                    ? ':' + port
-                                    : ''
-                                    }${swaggerURI}`,
-                                service: 'server'
-                            }
-                        );
-                    }
                 }
             )
     }

@@ -1,7 +1,7 @@
 import swaggerUi, { JsonObject, SwaggerUiOptions } from 'swagger-ui-express';
-import digitalLawSwaggerDoc from '../swagger/api-doc.json';
+import apiDoc from '../swagger/api-doc.json';
 
-const swaggerDoc: JsonObject | undefined = digitalLawSwaggerDoc;
+const swaggerDoc: JsonObject | undefined = apiDoc;
 
 export {
     swaggerUi,

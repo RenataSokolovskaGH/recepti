@@ -2,9 +2,8 @@ import express from 'express';
 import { router } from './routes';
 import knex from './db/knex';
 import { serverHelper } from './helpers';
-import { authController } from './controllers';
 import { routeConstants } from './routes/definition';
-import { sysEnvironment } from './constants';
+import { logger } from './helpers/logger';
 
 const allRoutes = routeConstants.getAllRoutes(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,19 +21,13 @@ export const bootstrap = async (
             {
                 app,
                 port,
-                environment: sysEnvironment,
                 swaggerURI: routeConstants.routes.swaggerURI
             }
         )
 
-        await serverHelper.createDBConnectionInstance(
-            knex
-        )
-
-
-        authController.assignSensitiveApis(
-            routeConstants.sensitiveApis
-        )
+        // await serverHelper.createDBConnectionInstance(
+        //     knex
+        // )
 
         serverHelper.attachAuxiliaryMiddleware(
             app
@@ -48,6 +41,6 @@ export const bootstrap = async (
         )
 
     } catch (err) {
-       
+        logger(err);
     }
 }

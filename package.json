@@ -1,11 +1,11 @@
 {
-  "name": "recipes",
+  "name": "my-ideal-recipe",
   "version": "0.0.1",
   "description": "",
   "main": "dist/src",
   "scripts": {
     "start": "NODE_PATH=dist/ node dist/src",
-    "build": "npx tsc",   
+    "build": "npx tsc",
     "build:clear": "rimraf dist",
     "start:dev": "NODE_PATH=./ ts-node src",
     "migrate:rollback": "NODE_PATH=dist/ npx knex migrate:rollback --knexfile=./knexfile.ts",
@@ -13,7 +13,7 @@
     "migrate:make": "cross-env NODE_ENV=make npx knex migrate:make -x ts --knexfile=./knexfile.ts",
     "seed:run": "cross-env NODE_ENV=make npx knex seed:run --knexfile=./knexfile.ts"
   },
-  "author": "Renata",
+  "author": "Renata Sokolovska",
   "license": "See License",
   "dependencies": {
     "cross-env": "^7.0.3",

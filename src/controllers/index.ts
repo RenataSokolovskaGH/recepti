@@ -1,9 +1,5 @@
-import commonController from './common';
-import { instance as authController } from './auth';
-import userController from './user';
+import { dashCtl } from "./dashboard"
 
 export {
-    commonController,
-    authController,
-    userController
+    dashCtl
 }

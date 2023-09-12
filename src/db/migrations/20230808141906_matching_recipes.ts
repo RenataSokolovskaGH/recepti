@@ -1,6 +1,5 @@
 import { dbModels } from '../db-models'
 import { Knex } from 'knex';
-import { commonConstants } from '../../constants';
 
 const tableName = dbModels.matchingRecipes.tableName;
 
@@ -25,10 +24,6 @@ exports.up = async (knex: Knex) => {
 }
 
 exports.down = async (knex: Knex) => {
-    if (!commonConstants.db.grantUnsafeMigration) {
-        return;
-    }
-
     await knex.schema.hasTable(tableName).then((exists: boolean) => {
         if (exists) {
             return knex.schema.dropTable(tableName);

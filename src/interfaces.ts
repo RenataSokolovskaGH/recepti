@@ -1,50 +1,11 @@
-import { Fields, Files } from "formidable";
-import { EStatuses } from './enums';
-import { Express, Router, RequestHandler, Request } from 'express';
-import { TAlterDBCandidate } from "./types";
-import { Knex } from "knex";
-
-export interface IColumnUpdateParams {
-    callback: (t: Knex.CreateTableBuilder) => any;
-    updateAlways?: boolean;
-}
-
-export interface IAlterDBColumnParams {
-    knex: Knex,
-    alterCandidates: TAlterDBCandidate,
-    tableName: string;
-}
+import { Router, RequestHandler, Express } from 'express';
+import { EDietFlag } from './enums';
 
 export interface IInitializeSwaggerModuleParams {
     router: Router;
     swaggerUri: string,
-    basicAuth: RequestHandler;
     customSiteTitle?: string;
     swaggerImportPath?: string;
-}
-
-export interface ISensitiveApiStruct {
-    vacancyPeriodSec: number;
-    hitCountThreshold: number;
-}
-
-export interface IFileTypeWhiteListSpecificStruct {
-    token: string;
-    preview: boolean;
-    ending: string;
-}
-
-export interface IProxiedRoute {
-    proxied: boolean;
-    proxyRoute?: string;
-}
-
-export interface IVerifyFileUrlAbsoluteParams extends IProxiedRoute {
-    fileUrl: string
-}
-
-export interface ITransformAvatarSchemaUrlParams extends IProxiedRoute {
-    avatarSchema?: IAvatarSchema | null;
 }
 
 export interface IAvatarSchema {
@@ -52,19 +13,18 @@ export interface IAvatarSchema {
     thumbnailUrl: string | null;
 }
 
-export interface IFileFieldsSchema {
-    files: Files;
-    fields: Fields;
+export interface IGetRecipesParams extends IRecipeSchema { }
+
+export interface IRecipeSchema {
+    name: string;
+    calories: number;
+    dietFlag: EDietFlag;
+    isSweet: boolean;
+    ingredients: string;
 }
 
-export interface IIncomingClientConfig {
-    ip: string
-    ua?: string;
-    browser?: string;
-    os?: string;
-    platform?: string;
-    version?: string;
-    route?: string;
+export interface RGetRecipes {
+    recipes: IRecipeSchema[];
 }
 
 export interface IPaginationInput {
@@ -78,22 +38,8 @@ export interface IAPIErrorSchema {
     code: string
 }
 
-export interface IResolveFailedLoginAttemptParams {
-    clientIp?: string;
-    userName?: string;
-    status: EStatuses;
-}
-
-export interface IEditUserProfile {
-    userId: number
-    firstName: string;
-    lastName: string;
-    jobTitle: string;
-}
-
 export interface ICreateServerInstanceParams {
     app: Express;
     port: number;
     swaggerURI?: string;
-    environment: string | undefined;
 }

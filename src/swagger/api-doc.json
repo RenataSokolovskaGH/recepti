@@ -1,16 +1,16 @@
 {
    "openapi": "3.0.0",
    "info": {
-      "title": "Project API Documentation",
+      "title": "My Ideal Recipe",
       "contact": {
-         "name": "X"
+         "name": "Renata Sokolovska"
       },
       "version": "3.1.0"
    },
    "servers": [
       {
          "description": "Local",
-         "url": "{schema}://localhost:4000/",
+         "url": "{schema}://localhost:3000/",
          "variables": {
             "schema": {
                "enum": [
@@ -19,33 +19,21 @@
                "default": "http"
             }
          }
-      },
-      {
-         "description": "Staging",
-         "url": "{schema}://server.com/",
-         "variables": {
-            "schema": {
-               "enum": [
-                  "https"
-               ],
-               "default": "https"
-            }
-         }
       }
    ],
    "paths": {
-      "/api/auth/login": {
+      "/api/dashboard/get-recipes": {
          "post": {
             "tags": [
-               "Auth"
+               "Dashboard"
             ],
-            "summary": "Login to the account",
-            "operationId": "login",
+            "summary": "Get recipes that match the prescribed conditions",
+            "operationId": "getRecipes",
             "requestBody": {
                "content": {
                   "application/json": {
                      "schema": {
-                        "$ref": "#/components/schemas/UserLogInRequest"
+                        "$ref": "#/components/schemas/GetRecipesRequest"
                      }
                   }
                }
@@ -56,7 +44,7 @@
                   "content": {
                      "application/json": {
                         "schema": {
-                           "$ref": "#/components/schemas/UserLogInResponse"
+                           "$ref": "#/components/schemas/GetRecipesResponse"
                         }
                      }
                   }
@@ -71,48 +59,7 @@
                      }
                   }
                }
-            },
-            "security": [
-               {
-                  "USER_ACCESS_TOKEN": []
-               }
-            ]
-         }
-      },
-      "/api/dashboard/user/logout": {
-         "post": {
-            "tags": [
-               "Auth"
-            ],
-            "summary": "Logout current user",
-            "operationId": "logout",
-            "responses": {
-               "200": {
-                  "description": "Success",
-                  "content": {
-                     "application/json": {
-                        "schema": {
-                           "$ref": "#/components/schemas/APIErrorResponse"
-                        }
-                     }
-                  }
-               },
-               "400": {
-                  "description": "Bad request",
-                  "content": {
-                     "application/json": {
-                        "schema": {
-                           "$ref": "#/components/schemas/APIErrorResponse"
-                        }
-                     }
-                  }
-               }
-            },
-            "security": [
-               {
-                  "USER_ACCESS_TOKEN": []
-               }
-            ]
+            }
          }
       }
    },
@@ -132,25 +79,75 @@
                   "type": "number"
                }
             }
+         },
+         "GetRecipesRequest": {
+            "type": "object",
+            "properties": {
+               "name": {
+                  "type": "string"
+               },
+               "calories": {
+                  "type": "number",
+                  "format": "integer",
+                  "example": 600
+               },
+               "dietFlag": {
+                  "$ref": "#/components/schemas/DietFlag"
+               },
+               "isSweet": {
+                  "type": "boolean",
+                  "default": false
+               },
+               "ingredients": {
+                  "type": "string",
+                  "example": "tomato, mushrooms"
+               }
+            }
+         },
+         "GetRecipesResponse": {
+            "type": "object",
+            "properties": {
+               "recipes": {
+                  "$ref": "#/components/schemas/RecipeSchema"
+               }
+            }
+         },
+         "RecipeSchema": {
+            "type": "object",
+            "properties": {
+               "name": {
+                  "type": "string"
+               },
+               "calories": {
+                  "type": "number",
+                  "format": "integer",
+                  "example": 600
+               },
+               "dietFlag": {
+                  "$ref": "#/components/schemas/DietFlag"
+               },
+               "isSweet": {
+                  "type": "boolean",
+                  "default": false
+               },
+               "ingredients": {
+                  "type": "string",
+                  "example": "tomato, mushrooms"
+               }
+            }
+         },
+         "DietFlag": {
+            "type": "string",
+            "enum": [
+               "vegan",
+               "vegetarian"
+            ]
          }
       },
-      "securitySchemes": {
-         "USER_ACCESS_TOKEN": {
-            "description": "JW user access token",
-            "type": "apiKey",
-            "name": "user-access-token",
-            "in": "header"
-         }
-      },
-      "security": [
-         {
-            "USER_ACCESS_TOKEN": []
-         }
-      ],
       "tags": [
          {
-            "name": "Core Functionality",
-            "description": "Core API"
+            "name": "Dashboard",
+            "description": "Dashboard API"
          }
       ]
    }
