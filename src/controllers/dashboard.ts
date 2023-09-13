@@ -63,6 +63,10 @@ class DashboardCtl {
                     }
                 }
             )
+            .orderBy(
+                "calories",
+                "desc"
+            )
 
         return {
             recipes: myRecipes.map(q => q.recipeSchema())

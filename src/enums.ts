@@ -1,4 +1,5 @@
 export enum EDietFlag {
     Vegan = 'vegan',
-    Vegetarian = 'vegetarian'
+    Vegetarian = 'vegetarian',
+    None = 'none'
 }
