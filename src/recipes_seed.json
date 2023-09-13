@@ -1,0 +1,482 @@
+[
+    {
+        "name": "Vegan Chocolate Brownies",
+        "calories": 300,
+        "diet_flag": "vegan",
+        "is_sweet": true,
+        "ingredients": "Cocoa powder, almond flour, maple syrup, coconut oil, vanilla extract, flaxseed, baking soda, salt",
+        "avatar": null,
+        "description": "Moist and fudgy vegan brownies with a rich chocolate flavor.",
+        "making_procedure": "Mix all ingredients in a bowl until well combined. Pour into a greased pan and bake at 350°F for 25-30 minutes."
+    },
+    {
+        "name": "Vegetarian Pasta Primavera",
+        "calories": 400,
+        "diet_flag": "vegetarian",
+        "is_sweet": false,
+        "ingredients": "Pasta, olive oil, garlic, bell peppers, zucchini, cherry tomatoes, basil, parmesan cheese, salt, pepper",
+        "avatar": null,
+        "description": "Light and fresh pasta with sautéed vegetables.",
+        "making_procedure": "Cook pasta. In another pan, sauté garlic, add vegetables and cook until tender. Mix with pasta and season."
+    },
+    {
+        "name": "Tofu Stir-Fry",
+        "calories": 250,
+        "diet_flag": "vegan",
+        "is_sweet": false,
+        "ingredients": "Tofu, soy sauce, ginger, garlic, mixed vegetables, sesame oil, green onions",
+        "avatar": null,
+        "description": "A quick and easy tofu stir-fry with colorful vegetables.",
+        "making_procedure": "Pan-fry tofu cubes until golden. Add vegetables, garlic, ginger, and soy sauce. Cook for 5 minutes. Garnish with green onions."
+    },
+    {
+        "name": "French Crepes",
+        "calories": 150,
+        "diet_flag": "none",
+        "is_sweet": true,
+        "ingredients": "Flour, milk, eggs, sugar, butter, vanilla extract",
+        "avatar": null,
+        "description": "Thin and delicate pancakes, perfect with sweet fillings.",
+        "making_procedure": "Mix ingredients into a batter. Pour into a hot, greased skillet, swirling to coat. Cook until golden, flip and repeat."
+    },
+    {
+        "name": "Vegetarian Biryani",
+        "calories": 320,
+        "diet_flag": "vegetarian",
+        "is_sweet": false,
+        "ingredients": "Basmati rice, mixed vegetables, biryani masala, yogurt, onions, tomatoes, garlic, ginger, cilantro, mint",
+        "avatar": null,
+        "description": "Aromatic rice dish with flavorful spices and vegetables.",
+        "making_procedure": "Sauté onions until golden, add spices, vegetables, and rice. Mix well, add water, and cook until done."
+    },
+    {
+        "name": "Vegan Banana Bread",
+        "calories": 270,
+        "diet_flag": "vegan",
+        "is_sweet": true,
+        "ingredients": "Bananas, flour, baking soda, maple syrup, almond milk, vanilla extract, walnuts",
+        "avatar": null,
+        "description": "Moist and fluffy banana bread, perfect for breakfast or a snack.",
+        "making_procedure": "Mix wet and dry ingredients separately, then combine. Pour into a loaf pan and bake at 350°F for 45 minutes."
+    },
+    {
+        "name": "Guacamole",
+        "calories": 200,
+        "diet_flag": "vegan",
+        "is_sweet": false,
+        "ingredients": "Avocados, lime juice, salt, cilantro, onions, tomatoes, jalapeños",
+        "avatar": null,
+        "description": "A creamy and tangy avocado dip.",
+        "making_procedure": "Mash avocados, add the rest of the ingredients and mix well. Chill before serving."
+    },
+    {
+        "name": "Butter Chicken",
+        "calories": 500,
+        "diet_flag": "none",
+        "is_sweet": false,
+        "ingredients": "Chicken, yogurt, butter, tomatoes, garlic, ginger, garam masala, cream, cilantro",
+        "avatar": null,
+        "description": "Creamy and rich chicken dish with aromatic spices.",
+        "making_procedure": "Marinate chicken in yogurt and spices. Cook in butter and tomato sauce, finish with cream. Garnish with cilantro."
+    },
+    {
+        "name": "Vegan Berry Smoothie",
+        "calories": 180,
+        "diet_flag": "vegan",
+        "is_sweet": true,
+        "ingredients": "Mixed berries, almond milk, banana, chia seeds",
+        "avatar": null,
+        "description": "A refreshing and nutritious drink.",
+        "making_procedure": "Blend all ingredients together until smooth."
+    },
+    {
+        "name": "Falafel",
+        "calories": 230,
+        "diet_flag": "vegan",
+        "is_sweet": false,
+        "ingredients": "Chickpeas, garlic, cilantro, cumin, coriander, salt, baking powder",
+        "avatar": null,
+        "description": "Crispy and flavorful deep-fried chickpea balls.",
+        "making_procedure": "Blend chickpeas with spices. Form into balls and fry until golden."
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "ingredients": "200g spaghetti, 100g pancetta, 2 large eggs, 50g pecorino cheese, 50g parmesan cheese, fresh black pepper, salt, 2 cloves of garlic, a little olive oil",
+        "avatar": null,
+        "calories": 550,
+        "making_procedure": "Cook spaghetti in a pot of salted boiling water. While spaghetti is cooking, sauté pancetta with garlic in a skillet. In a bowl, whisk together eggs, cheese, salt, and pepper. Drain spaghetti and add to the skillet with pancetta. Remove from heat, add egg mixture, and mix quickly until creamy.",
+        "diet_flag": "none",
+        "description": "A classic Roman dish, Spaghetti Carbonara is creamy, cheesy, and offers a delightful salty bite from the pancetta.",
+        "is_sweet": false
+    },
+    {
+        "name": "Vegan Mango Sorbet",
+        "ingredients": "2 ripe mangos, 1/2 cup sugar, 1/4 cup water, 1 tbsp lemon juice",
+        "avatar": null,
+        "calories": 150,
+        "making_procedure": "Blend mango pulp, sugar, water, and lemon juice until smooth. Pour into a container and freeze for at least 4 hours. Scoop and serve.",
+        "diet_flag": "vegan",
+        "description": "A refreshing sorbet made with the natural sweetness and tropical flavor of mango.",
+        "is_sweet": true
+    },
+    {
+        "name": "Tomato Basil Soup",
+        "ingredients": "6 ripe tomatoes, 1 onion, 2 cloves garlic, 1/4 cup fresh basil, 2 cups vegetable broth, 1/2 cup heavy cream, 2 tbsp olive oil, salt and pepper to taste",
+        "avatar": null,
+        "calories": 180,
+        "making_procedure": "Sauté chopped onion and garlic in olive oil until translucent. Add chopped tomatoes and cook until softened. Add vegetable broth and bring to a boil. Reduce heat and simmer for 10 minutes. Blend until smooth, return to pot, add chopped basil and heavy cream. Heat for another 5 minutes, season with salt and pepper.",
+        "diet_flag": "vegetarian",
+        "description": "A creamy and tangy tomato soup enhanced with the aromatic presence of fresh basil.",
+        "is_sweet": false
+    },
+    {
+        "name": "Chicken Tikka Masala",
+        "ingredients": "200g chicken breast, 2 tbsp yogurt, 1 tbsp lemon juice, 2 tsp tikka masala spice, 1 onion, 2 cloves garlic, 1 cup tomato puree, 1/2 cup cream, 2 tbsp oil, salt to taste",
+        "avatar": null,
+        "calories": 420,
+        "making_procedure": "Marinate chicken with yogurt, tikka masala spice, lemon juice, and salt for at least 2 hours. Grill until cooked. In a pan, sauté onion and garlic in oil, add tomato puree, grilled chicken pieces, and cream. Cook for 10 minutes until flavors meld together.",
+        "diet_flag": "none",
+        "description": "Chicken Tikka Masala is a rich and creamy dish with grilled chicken pieces drenched in a spicy tomato-based gravy.",
+        "is_sweet": false
+    },
+    {
+        "name": "Moroccan Lentil Soup",
+        "ingredients": "1 cup green lentils, 2 carrots, 1 onion, 2 cloves garlic, 1 tsp cumin, 1 tsp paprika, 1/2 tsp cinnamon, 4 cups vegetable broth, 2 tbsp olive oil, salt and pepper to taste, cilantro for garnish",
+        "avatar": null,
+        "calories": 210,
+        "making_procedure": "In a pot, sauté onion, garlic, and carrots in olive oil until translucent. Add spices and lentils, stirring for 2 minutes. Pour in vegetable broth and simmer for 40 minutes. Season with salt and pepper. Garnish with cilantro.",
+        "diet_flag": "vegan",
+        "description": "A hearty soup infused with the aromatic spices of Morocco.",
+        "is_sweet": false
+    },
+    {
+        "name": "Vegan Blueberry Pancakes",
+        "ingredients": "1 cup flour, 1 tbsp sugar, 1 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 cup almond milk, 2 tbsp coconut oil, 1/2 cup blueberries",
+        "avatar": null,
+        "calories": 270,
+        "making_procedure": "In a bowl, mix dry ingredients. Add almond milk and coconut oil to form a batter. Fold in blueberries. On a heated skillet, pour batter to form pancakes. Cook until bubbles appear, then flip and cook the other side.",
+        "diet_flag": "vegan",
+        "description": "Fluffy vegan pancakes bursting with fresh blueberries.",
+        "is_sweet": true
+    },
+    {
+        "name": "Teriyaki Salmon",
+        "ingredients": "2 salmon fillets, 1/4 cup soy sauce, 2 tbsp mirin, 2 tbsp sake, 2 tbsp honey, 1 clove garlic minced, 1 tsp grated ginger",
+        "avatar": null,
+        "calories": 420,
+        "making_procedure": "Combine soy sauce, mirin, sake, honey, garlic, and ginger to make teriyaki sauce. Marinate salmon in half the sauce for at least 30 minutes. Heat a skillet and cook salmon fillets until done, pouring the remaining sauce towards the end.",
+        "diet_flag": "none",
+        "description": "Salmon fillets glazed with a homemade teriyaki sauce, offering a delightful sweet and salty combination.",
+        "is_sweet": false
+    },
+    {
+        "name": "Lemon Sorbet",
+        "ingredients": "1 cup sugar, 2 cups water, 1 cup fresh lemon juice, 1 tbsp lemon zest",
+        "avatar": null,
+        "calories": 160,
+        "making_procedure": "Boil sugar and water until sugar dissolves. Let it cool. Mix in lemon juice and zest. Pour into a container and freeze until set. Scoop and serve.",
+        "diet_flag": "vegan",
+        "description": "A tangy and refreshing lemon-flavored frozen treat.",
+        "is_sweet": true
+    },
+    {
+        "name": "Pumpkin Curry",
+        "ingredients": "2 cups pumpkin cubes, 1 can coconut milk, 2 tbsp curry paste, 1 bell pepper sliced, 1 onion chopped, 2 cloves garlic minced, 2 tbsp oil, salt to taste",
+        "avatar": null,
+        "calories": 220,
+        "making_procedure": "In a pot, sauté onions and garlic in oil. Add curry paste and stir for 1 minute. Add pumpkin and bell pepper, stir to coat. Pour in coconut milk and simmer until pumpkin is tender.",
+        "diet_flag": "vegan",
+        "description": "A creamy and aromatic pumpkin curry with a hint of spiciness from the curry paste.",
+        "is_sweet": false
+    },
+    {
+        "name": "Lamb Kofta",
+        "ingredients": "500g ground lamb, 1 onion finely chopped, 2 cloves garlic minced, 2 tsp cumin, 1 tsp paprika, 1/4 cup chopped parsley, salt and pepper to taste",
+        "avatar": null,
+        "calories": 450,
+        "making_procedure": "Combine all ingredients in a bowl. Shape into elongated meatballs. Grill or pan-fry until fully cooked and slightly charred.",
+        "diet_flag": "none",
+        "description": "Succulent ground lamb skewers infused with herbs and spices.",
+        "is_sweet": false
+    },
+    {
+        "name": "Pineapple Fried Rice",
+        "ingredients": "2 cups cooked rice, 1 cup pineapple chunks, 1 bell pepper diced, 1 carrot diced, 50g cashews, 2 tbsp soy sauce, 1 onion chopped, 2 cloves garlic minced, 2 tbsp oil",
+        "avatar": null,
+        "calories": 320,
+        "making_procedure": "In a pan, sauté onion and garlic in oil. Add carrot and bell pepper, cook until tender. Add rice, pineapple, cashews, and soy sauce. Stir fry for 5 minutes.",
+        "diet_flag": "vegetarian",
+        "description": "A tropical twist on the classic fried rice with juicy pineapple chunks and crunchy cashews.",
+        "is_sweet": false
+    },
+    {
+        "name": "Greek Tzatziki",
+        "ingredients": "2 cups Greek yogurt, 1 cucumber, 2 cloves garlic minced, 2 tbsp lemon juice, 2 tbsp fresh dill chopped, 1 tbsp olive oil, salt and pepper to taste",
+        "avatar": null,
+        "calories": 60,
+        "making_procedure": "Grate the cucumber and drain it in a colander. Mix the drained cucumber, garlic, lemon juice, dill, and yogurt in a bowl. Drizzle with olive oil and season with salt and pepper.",
+        "diet_flag": "vegetarian",
+        "description": "A classic Greek yogurt-based sauce or dip, perfect for grilled meats or as a refreshing spread.",
+        "is_sweet": false
+    },
+    {
+        "name": "Quinoa Salad",
+        "ingredients": "1 cup cooked quinoa, 1/2 cup cherry tomatoes halved, 1/4 cup diced cucumber, 1/4 cup feta cheese, 2 tbsp chopped olives, 2 tbsp olive oil, 1 tbsp lemon juice, salt and pepper to taste",
+        "avatar": null,
+        "calories": 250,
+        "making_procedure": "In a bowl, mix quinoa, tomatoes, cucumber, feta, and olives. Dress with olive oil and lemon juice. Season with salt and pepper.",
+        "diet_flag": "vegetarian",
+        "description": "A Mediterranean-inspired salad, light and refreshing with a protein-packed quinoa base.",
+        "is_sweet": false
+    },
+    {
+        "name": "Butter Chicken",
+        "ingredients": "200g chicken breast, 2 tbsp butter, 1 onion chopped, 2 cloves garlic minced, 1 tsp ginger minced, 2 tbsp tomato puree, 1 cup cream, 2 tsp garam masala, 1 tsp turmeric, 1 tsp chili powder, salt to taste",
+        "avatar": null,
+        "calories": 420,
+        "making_procedure": "Melt butter in a pan, sauté onion, garlic, and ginger until translucent. Add spices and stir for 1 minute. Add chicken pieces and brown them slightly. Add tomato puree and cream, simmer until chicken is cooked thoroughly.",
+        "diet_flag": "none",
+        "description": "A creamy and flavorful Indian curry with tender chicken pieces, perfect when paired with naan or rice.",
+        "is_sweet": false
+    },
+    {
+        "name": "Vegan Guacamole",
+        "ingredients": "2 ripe avocados, 1 small onion finely chopped, 1 tomato chopped, 1 clove garlic minced, 1 jalapeno deseeded and minced, 2 tbsp cilantro chopped, 1 lime juiced, salt to taste",
+        "avatar": null,
+        "calories": 190,
+        "making_procedure": "Mash the avocados in a bowl to your desired consistency. Mix in the onion, tomato, garlic, jalapeno, and cilantro. Squeeze in the lime juice and season with salt.",
+        "diet_flag": "vegan",
+        "description": "A creamy and zesty dip, perfect for tortilla chips or as a spread.",
+        "is_sweet": false
+    },
+    {
+        "name": "Eggplant Parmesan",
+        "ingredients": "2 medium eggplants sliced, 1 cup marinara sauce, 1 cup mozzarella cheese, 1/2 cup parmesan cheese, 1/2 cup flour, 2 eggs beaten, 1 cup breadcrumbs, salt and pepper to taste, oil for frying",
+        "avatar": null,
+        "calories": 320,
+        "making_procedure": "Dredge eggplant slices in flour, dip in beaten eggs, then coat with breadcrumbs. Fry until golden brown. In a baking dish, layer fried eggplant, marinara sauce, and cheeses. Bake at 375°F for 25-30 minutes.",
+        "diet_flag": "vegetarian",
+        "description": "Crispy eggplant slices layered with cheese and marinara sauce, baked to perfection.",
+        "is_sweet": false
+    },
+    {
+        "name": "Vegan Banana Bread",
+        "ingredients": "2 ripe bananas mashed, 1.5 cups flour, 3/4 cup sugar, 1/2 cup almond milk, 1/4 cup coconut oil, 1 tsp baking soda, 1 tsp vanilla extract, pinch of salt",
+        "avatar": null,
+        "calories": 280,
+        "making_procedure": "Mix mashed bananas with sugar, almond milk, coconut oil, and vanilla extract. Add flour, baking soda, and salt. Mix until combined. Pour into a greased loaf pan and bake at 350°F for 60 minutes.",
+        "diet_flag": "vegan",
+        "description": "A moist and fluffy bread with the natural sweetness of ripe bananas.",
+        "is_sweet": true
+    },
+    {
+        "name": "Garlic Shrimp Pasta",
+        "ingredients": "200g spaghetti, 200g shrimp peeled and deveined, 4 cloves garlic minced, 2 tbsp olive oil, 1/4 cup white wine, 1/4 cup parsley chopped, red pepper flakes, salt and pepper to taste",
+        "avatar": null,
+        "calories": 520,
+        "making_procedure": "Cook spaghetti as per package instructions. In a pan, heat olive oil, add garlic and red pepper flakes. Sauté shrimp until pink. Deglaze with white wine and let it reduce. Add cooked spaghetti, toss with parsley, and season.",
+        "diet_flag": "none",
+        "description": "A savory pasta dish with succulent shrimps enhanced by garlic and white wine.",
+        "is_sweet": false
+    },
+    {
+        "name": "Raspberry Chia Pudding",
+        "ingredients": "1/4 cup chia seeds, 1 cup almond milk, 1 tbsp maple syrup, 1/2 cup raspberries, 1 tsp vanilla extract",
+        "avatar": null,
+        "calories": 220,
+        "making_procedure": "In a bowl, mix chia seeds with almond milk, maple syrup, and vanilla extract. Let it sit for 4 hours or overnight until thickened. Layer with raspberries before serving.",
+        "diet_flag": "vegan",
+        "description": "A creamy pudding with the health benefits of chia seeds and the tanginess of raspberries.",
+        "is_sweet": true
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "ingredients": "200g spaghetti, 100g pancetta diced, 2 eggs, 1/2 cup grated pecorino cheese, 1 clove garlic minced, black pepper to taste, salt for pasta water",
+        "avatar": null,
+        "calories": 560,
+        "making_procedure": "Cook spaghetti in salted water. In a bowl, whisk eggs with pecorino cheese. In a pan, cook pancetta until crispy, add garlic and cooked spaghetti. Remove from heat, add egg mixture and toss vigorously until creamy. Season with black pepper.",
+        "diet_flag": "none",
+        "description": "A classic Roman pasta dish with a creamy egg-based sauce, crispy pancetta, and sharp pecorino cheese.",
+        "is_sweet": false
+    },
+    {
+        "name": "Tabbouleh",
+        "ingredients": "1 cup bulgur wheat, 1.5 cups fresh parsley chopped, 1 cup fresh mint chopped, 4 tomatoes diced, 1 cucumber diced, 3 green onions sliced, 1/4 cup lemon juice, 1/4 cup olive oil, salt and pepper to taste",
+        "avatar": null,
+        "calories": 180,
+        "making_procedure": "Soak bulgur in cold water for 30 minutes, then drain and squeeze out excess water. Combine with all other ingredients in a bowl and mix well. Refrigerate for an hour before serving.",
+        "diet_flag": "vegan",
+        "description": "A fresh herb salad with bulgur, known for its refreshing taste.",
+        "is_sweet": false
+    },
+    {
+        "name": "Moussaka",
+        "ingredients": "2 large eggplants sliced, 500g lamb mince, 1 onion chopped, 2 cloves garlic minced, 400g canned tomatoes, 1/2 cup red wine, 2 tbsp olive oil, 1/4 tsp cinnamon, 1/4 tsp allspice, bechamel sauce, salt and pepper to taste",
+        "avatar": null,
+        "calories": 420,
+        "making_procedure": "Fry eggplant slices until golden. In another pan, sauté onion and garlic, then add lamb, breaking it apart. Once browned, add tomatoes, wine, and spices. In a baking dish, layer eggplant, meat sauce, and bechamel. Repeat. Bake at 375°F for 40 minutes.",
+        "diet_flag": "none",
+        "description": "A layered dish of eggplant, spiced lamb, and creamy bechamel.",
+        "is_sweet": false
+    },
+    {
+        "name": "Hummus",
+        "ingredients": "400g canned chickpeas, 2 tbsp tahini, 1 clove garlic, 2 tbsp lemon juice, 2 tbsp olive oil, salt and paprika to taste",
+        "avatar": null,
+        "calories": 160,
+        "making_procedure": "Blend chickpeas, tahini, garlic, and lemon juice until smooth. While blending, drizzle in olive oil. Season with salt and garnish with paprika.",
+        "diet_flag": "vegan",
+        "description": "A creamy chickpea spread, perfect with pita or fresh veggies.",
+        "is_sweet": false
+    },
+    {
+        "name": "Dolma (Stuffed Grape Leaves)",
+        "ingredients": "20 grape leaves, 1 cup rice, 1 onion chopped, 1/4 cup fresh parsley chopped, 1/4 cup fresh mint chopped, 2 tbsp olive oil, 1 lemon juiced, salt and pepper to taste",
+        "avatar": null,
+        "calories": 80,
+        "making_procedure": "Mix rice, onion, parsley, mint, and lemon juice. Place a spoonful of mixture in the center of each grape leaf and roll tightly. Place in a pot, cover with water, and simmer for 40 minutes.",
+        "diet_flag": "vegan",
+        "description": "Grape leaves stuffed with a flavorful rice mixture.",
+        "is_sweet": false
+    },
+    {
+        "name": "Falafel",
+        "ingredients": "400g canned chickpeas, 1 onion chopped, 2 cloves garlic minced, 1/4 cup fresh parsley, 1 tsp cumin, 1 tsp coriander, 2 tbsp flour, salt to taste, oil for frying",
+        "avatar": null,
+        "calories": 230,
+        "making_procedure": "Blend chickpeas, onion, garlic, parsley, spices, and flour until a coarse mixture forms. Shape into balls and deep fry until golden brown.",
+        "diet_flag": "vegan",
+        "description": "Crispy chickpea balls, perfect in a pita sandwich or as a snack.",
+        "is_sweet": false
+    },
+    {
+        "name": "Baklava",
+        "ingredients": "16 sheets phyllo dough, 1 cup mixed nuts chopped, 1/2 cup melted butter, 1 tsp cinnamon, 1 cup water, 1 cup sugar, 1 tsp vanilla, 1/2 cup honey",
+        "avatar": null,
+        "calories": 420,
+        "making_procedure": "Layer phyllo sheets, brushing each with butter. After 8 sheets, spread nuts and cinnamon. Continue layering. Slice into squares. Bake at 350°F for 30 minutes. Meanwhile, make syrup with water, sugar, vanilla, and honey. Pour over baked baklava.",
+        "diet_flag": "none",
+        "description": "A sweet pastry made of layers of phyllo, filled with nuts and sweetened with syrup.",
+        "is_sweet": true
+    },
+    {
+        "name": "Fattoush",
+        "ingredients": "2 pita breads toasted and broken, 3 tomatoes diced, 2 cucumbers diced, 1 red onion sliced, 1/4 cup fresh mint chopped, 1/4 cup fresh parsley chopped, 1/4 cup lemon juice, 3 tbsp olive oil, salt and sumac to taste",
+        "avatar": null,
+        "calories": 140,
+        "making_procedure": "In a large bowl, combine tomatoes, cucumbers, onion, mint, and parsley. Dress with lemon juice, olive oil, salt, and sumac. Mix in toasted pita before serving.",
+        "diet_flag": "vegan",
+        "description": "A tangy and crunchy salad made with toasted pita and fresh veggies.",
+        "is_sweet": false
+    },
+    {
+        "name": "Paella",
+        "ingredients": "1 cup rice, 200g chicken pieces, 200g shrimp peeled and deveined, 1 bell pepper sliced, 1 onion chopped, 2 cloves garlic minced, 1/4 tsp saffron, 1/4 tsp paprika, 2 cups chicken stock, 2 tbsp olive oil, salt and pepper to taste",
+        "avatar": null,
+        "calories": 460,
+        "making_procedure": "In a paella pan, sauté onion, garlic, and bell pepper. Add chicken and brown. Add rice, saffron, paprika, and stock. Simmer until rice is almost done. Add shrimp on top and cook until they turn pink.",
+        "diet_flag": "none",
+        "description": "A traditional Spanish rice dish, cooked with saffron, chicken, and seafood.",
+        "is_sweet": false
+    },
+    {
+        "name": "Ćevapi",
+        "ingredients": "500g minced beef, 250g minced lamb, 1 onion finely chopped, 2 cloves garlic minced, 1 tsp paprika, salt and pepper to taste",
+        "avatar": null,
+        "calories": 290,
+        "making_procedure": "Mix all ingredients together and form small sausage-shaped patties. Grill or pan-fry until cooked through. Serve with somun (flatbread) and chopped onions.",
+        "diet_flag": "none",
+        "description": "Grilled minced meat sausages, a popular dish throughout the Balkans.",
+        "is_sweet": false
+    },
+    {
+        "name": "Burek",
+        "ingredients": "500g phyllo dough, 300g feta cheese crumbled, 3 eggs beaten, 100g melted butter, 1 cup yogurt",
+        "avatar": null,
+        "calories": 350,
+        "making_procedure": "Mix cheese, eggs, and yogurt to form filling. Layer phyllo sheets, brushing each with melted butter. Spread filling between layers. Roll and shape as desired. Bake at 375°F for 30 minutes or until golden brown.",
+        "diet_flag": "vegetarian",
+        "description": "Flaky pastry filled with cheese or meat, a beloved snack in the region.",
+        "is_sweet": false
+    },
+    {
+        "name": "Sarma",
+        "ingredients": "20 cabbage leaves, 500g minced beef, 1 cup rice, 1 onion chopped, 2 cloves garlic minced, 1 can of diced tomatoes, salt and pepper to taste, 1 tsp paprika",
+        "avatar": null,
+        "calories": 260,
+        "making_procedure": "Blanch cabbage leaves. Mix beef, rice, onion, and garlic. Place a spoonful of filling in each leaf and roll tightly. Place rolls in a pot, cover with tomatoes, season, and simmer for about an hour.",
+        "diet_flag": "none",
+        "description": "Stuffed cabbage rolls, slow-cooked in tomato sauce.",
+        "is_sweet": false
+    },
+    {
+        "name": "Ajvar",
+        "ingredients": "5 red bell peppers, 1 eggplant, 3 cloves garlic minced, 1/4 cup olive oil, 1 tbsp vinegar, salt and pepper to taste",
+        "avatar": null,
+        "calories": 150,
+        "making_procedure": "Roast peppers and eggplant. Peel and deseed peppers, and scoop out eggplant flesh. Blend all ingredients to a paste. Adjust seasoning and serve as a spread.",
+        "diet_flag": "vegan",
+        "description": "A smoky red pepper and eggplant relish, often referred to as 'Balkan caviar'.",
+        "is_sweet": false
+    },
+    {
+        "name": "Pita sa Jabukama",
+        "ingredients": "500g phyllo dough, 4 apples grated, 1 cup sugar, 1 tsp cinnamon, 100g melted butter",
+        "avatar": null,
+        "calories": 280,
+        "making_procedure": "Mix apples, sugar, and cinnamon for filling. Layer phyllo sheets, brushing each with butter. Spread filling between layers. Roll and bake at 375°F for 30 minutes or until golden.",
+        "diet_flag": "vegetarian",
+        "description": "Apple-filled pastry, a sweet treat perfect with a cup of coffee.",
+        "is_sweet": true
+    },
+    {
+        "name": "Tavče Gravče",
+        "ingredients": "2 cups white beans, 1 onion chopped, 2 cloves garlic minced, 1 bell pepper chopped, 1 tsp paprika, 1/2 tsp cayenne pepper, 2 tbsp olive oil, salt to taste",
+        "avatar": null,
+        "calories": 240,
+        "making_procedure": "Soak beans overnight. Cook until tender. Sauté onion, garlic, and bell pepper in olive oil. Add beans, paprika, cayenne, and salt. Transfer to an ovenproof dish and bake at 375°F for 30 minutes.",
+        "diet_flag": "vegan",
+        "description": "Traditional Macedonian baked beans in a rich paprika sauce.",
+        "is_sweet": false
+    },
+    {
+        "name": "Grilled Fish on the Adriatic",
+        "ingredients": "2 whole sea bass or mackerel cleaned, 2 cloves garlic minced, 1 lemon sliced, olive oil, salt and pepper to taste, fresh parsley for garnish",
+        "avatar": null,
+        "calories": 210,
+        "making_procedure": "Season fish inside and out with garlic, salt, and pepper. Place lemon slices inside. Grill on each side for about 7 minutes. Drizzle with olive oil and garnish with parsley before serving.",
+        "diet_flag": "none",
+        "description": "Fresh fish grilled to perfection, a staple along the Adriatic coast.",
+        "is_sweet": false
+    },
+    {
+        "name": "Knedle sa Šljivama",
+        "ingredients": "500g potatoes boiled and mashed, 200g flour, 1 egg, 10 plums, sugar for filling and dusting, 1 tsp cinnamon",
+        "avatar": null,
+        "calories": 270,
+        "making_procedure": "Mix potatoes, flour, and egg to form dough. Flatten a piece of dough, place plum filled with sugar inside, and form a ball. Boil in salted water until they float. Serve sprinkled with sugar and cinnamon.",
+        "diet_flag": "vegetarian",
+        "description": "Potato dumplings filled with sweet plums, a popular dessert in the Balkans.",
+        "is_sweet": true
+    },
+    {
+        "name": "Tarator",
+        "ingredients": "1 cucumber diced, 2 cups yogurt, 2 cloves garlic minced, 2 tbsp dill chopped, 1/4 cup walnuts chopped, 1 tbsp olive oil, salt to taste",
+        "avatar": null,
+        "calories": 150,
+        "making_procedure": "Mix all ingredients in a bowl and chill for at least an hour before serving. Adjust seasoning if necessary.",
+        "diet_flag": "vegetarian",
+        "description": "A refreshing cold yogurt and cucumber soup, popular in the summer months.",
+        "is_sweet": false
+    },
+    {
+        "name": "Palačinke",
+        "ingredients": "1 cup flour, 1.5 cups milk, 2 eggs, 1 tbsp sugar, pinch of salt, butter for frying, jam or Nutella for filling",
+        "avatar": null,
+        "calories": 220,
+        "making_procedure": "Whisk together flour, milk, eggs, sugar, and salt to make a smooth batter. In a frying pan, melt a little butter, pour a ladle of batter and spread thin. Fry until golden, flip and cook the other side. Fill with jam or Nutella and roll up.",
+        "diet_flag": "vegetarian",
+        "description": "Balkan-style crepes that can be filled with sweet or savory fillings.",
+        "is_sweet": true
+    }
+]

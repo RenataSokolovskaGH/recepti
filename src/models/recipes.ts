@@ -48,7 +48,7 @@ export class Recipes extends Model {
             calories: this.calories,
             dietFlag: this.diet_flag,
             ingredients: this.ingredients,
-            isSweet: this.is_sweet,
+            isSweet: !!this.is_sweet,
             name: this.name,
             avatar: this.avatar
         }

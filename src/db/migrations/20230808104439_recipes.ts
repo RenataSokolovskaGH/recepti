@@ -17,7 +17,7 @@ exports.up = async (knex: Knex) => {
                 t.string('ingredients', dbModels.recipes.length.ingredients).notNullable().index();
                 t.string('avatar');
                 t.integer('calories').notNullable().index();
-                t.string('making_procedure').notNullable();
+                t.string('making_procedure', dbModels.recipes.length.makingProcedure).notNullable();
                 t.string('diet_flag').index();
                 t.string('description').notNullable();
                 t.boolean('is_sweet').notNullable().index();

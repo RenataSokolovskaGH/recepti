@@ -25,9 +25,9 @@ export const bootstrap = async (
             }
         )
 
-        // await serverHelper.createDBConnectionInstance(
-        //     knex
-        // )
+        await serverHelper.createDBConnectionInstance(
+            knex
+        )
 
         serverHelper.attachAuxiliaryMiddleware(
             app

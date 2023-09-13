@@ -10,42 +10,58 @@ class DashboardCtl {
             ingredients,
             isSweet,
             name
-        }: IGetRecipesParams
+        }: Partial<IGetRecipesParams>
 
     ): Promise<RGetRecipes> {
-        const parsedIngredients = ingredients.split(',');
-
         const myRecipes = await Recipes
             .query()
             .where(
-                "name",
-                'like',
-                name
-            )
-            .where(
-                "calories",
-                '<=',
-                calories
-            )
-            .where(
                 q => {
-                    for (const ing of parsedIngredients) {
+                    if (name) {
                         q.where(
-                            'ingredients',
+                            "name",
                             'like',
-                            ing.trim()
+                            `%${name}%`
+                        )
+                    }
+
+                    if (calories !== undefined) {
+                        q.where(
+                            "calories",
+                            '<=',
+                            calories
+                        )
+                    }
+
+                    if (ingredients?.length) {
+                        q.where(
+                            x => {
+                                for (const ing of ingredients.split(',')) {
+                                    x.orWhere(
+                                        'ingredients',
+                                        'like',
+                                        `%${ing.trim()}%`
+                                    )
+                                }
+                            }
+                        )
+                    }
+
+                    if (dietFlag) {
+                        q.where(
+                            "diet_flag",
+                            'like',
+                            `%${dietFlag}%`
+                        )
+                    }
+
+                    if (isSweet) {
+                        q.where(
+                            "is_sweet",
+                            isSweet
                         )
                     }
                 }
-            )
-            .where(
-                "diet_flag",
-                'like',
-                dietFlag
-            )
-            .where(
-                "is_sweet",
-                isSweet
             )
 
         return {

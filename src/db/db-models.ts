@@ -3,11 +3,12 @@ export const dbModels = {
     recipes: {
         tableName: 'recipes',
         length: {
-            ingredients: 512 
+            ingredients: 512,
+            makingProcedure: 1024
         }
     },
 
-    matchingRecipes:{
+    matchingRecipes: {
         tableName: 'matching_recipes',
 
     }
