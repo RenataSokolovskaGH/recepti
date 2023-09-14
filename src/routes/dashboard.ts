@@ -9,7 +9,7 @@ export default {
 
     ) => {
         try {
-            const {
+            let {
                 name,
                 calories,
                 dietFlag,
@@ -17,6 +17,22 @@ export default {
                 ingredients
 
             } = req.body;
+
+            if (!name) {
+                name = undefined;
+            }
+
+            if (!calories) {
+                calories = undefined;
+            }
+
+            if (!dietFlag) {
+                dietFlag = undefined;
+            }
+
+            if (!ingredients) {
+                ingredients = undefined;
+            }
 
             const result = await dashCtl.getRecipes(
                 {

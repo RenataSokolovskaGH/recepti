@@ -478,5 +478,65 @@
         "diet_flag": "vegetarian",
         "description": "Balkan-style crepes that can be filled with sweet or savory fillings.",
         "is_sweet": true
+    },
+    {
+        "name": "Margherita Pizza",
+        "ingredients": "Pizza dough, 200g mozzarella cheese sliced, 200g tomato sauce, Fresh basil leaves, 2 tbsp olive oil, Salt to taste",
+        "avatar": null,
+        "calories": 270,
+        "making_procedure": "Spread tomato sauce over the pizza dough. Add slices of mozzarella. Drizzle with olive oil. Bake in a preheated oven at 475°F (245°C) for about 10-12 minutes or until the crust is golden. Garnish with fresh basil leaves before serving.",
+        "diet_flag": "vegetarian",
+        "description": "A classic Italian pizza with tomato, mozzarella, and basil.",
+        "is_sweet": false
+    },
+    {
+        "name": "Pepperoni Pizza",
+        "ingredients": "Pizza dough, 200g tomato sauce, 200g mozzarella cheese, 100g pepperoni slices",
+        "avatar": null,
+        "calories": 300,
+        "making_procedure": "Spread tomato sauce over the dough. Add mozzarella cheese and top with pepperoni slices. Bake in a preheated oven at 475°F (245°C) for 10-12 minutes or until golden.",
+        "diet_flag": "none",
+        "description": "A favorite among many, topped with pepperoni slices.",
+        "is_sweet": false
+    },
+    {
+        "name": "Veggie Delight Pizza",
+        "ingredients": "Pizza dough, 200g tomato sauce, 200g mozzarella cheese, Sliced bell peppers, Sliced onions, Sliced mushrooms, Sliced black olives, 1 tbsp olive oil, Salt and pepper to taste",
+        "avatar": null,
+        "calories": 250,
+        "making_procedure": "Spread sauce on dough, sprinkle cheese, and then add all the veggies. Drizzle with olive oil, season with salt and pepper. Bake at 475°F (245°C) for 10-12 minutes or until crust is golden.",
+        "diet_flag": "vegetarian",
+        "description": "A pizza loaded with colorful veggies for a healthier option.",
+        "is_sweet": false
+    },
+    {
+        "name": "BBQ Chicken Pizza",
+        "ingredients": "Pizza dough, 150g barbecue sauce, 200g cooked chicken pieces, 150g mozzarella cheese, Sliced red onions, Chopped cilantro for garnish",
+        "avatar": null,
+        "calories": 320,
+        "making_procedure": "Spread BBQ sauce on the dough. Add mozzarella cheese, chicken pieces, and red onions. Bake at 475°F (245°C) for 10-12 minutes. Garnish with cilantro before serving.",
+        "diet_flag": "none",
+        "description": "A tangy and savory pizza with the richness of barbecue sauce.",
+        "is_sweet": false
+    },
+    {
+        "name": "Hawaiian Pizza",
+        "ingredients": "Pizza dough, 200g tomato sauce, 200g mozzarella cheese, 100g sliced ham, Pineapple chunks, 1 tbsp olive oil",
+        "avatar": null,
+        "calories": 290,
+        "making_procedure": "Spread sauce on the dough. Add cheese, ham slices, and pineapple chunks. Drizzle with olive oil. Bake in a preheated oven at 475°F (245°C) for 10-12 minutes or until golden.",
+        "diet_flag": "none",
+        "description": "A sweet and savory combo of ham and pineapple.",
+        "is_sweet": true
+    },
+    {
+        "name": "White Pizza (Pizza Bianca)",
+        "ingredients": "Pizza dough, 3 tbsp olive oil, 200g ricotta cheese, 150g mozzarella cheese, 2 cloves garlic minced, Fresh rosemary sprigs, Salt and pepper to taste",
+        "avatar": null,
+        "calories": 280,
+        "making_procedure": "Brush dough with olive oil. Spread ricotta cheese and sprinkle mozzarella. Add minced garlic and rosemary. Season with salt and pepper. Bake at 475°F (245°C) for 10-12 minutes or until golden.",
+        "diet_flag": "vegetarian",
+        "description": "A creamy and aromatic pizza without the traditional tomato sauce.",
+        "is_sweet": false
     }
 ]

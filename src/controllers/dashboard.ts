@@ -25,7 +25,10 @@ class DashboardCtl {
                         )
                     }
 
-                    if (calories !== undefined) {
+                    if (
+                        calories &&
+                        calories > 0
+                    ) {
                         q.where(
                             "calories",
                             '<=',
@@ -51,14 +54,17 @@ class DashboardCtl {
                         q.where(
                             "diet_flag",
                             'like',
-                            `%${dietFlag}%`
+                            dietFlag
                         )
                     }
 
-                    if (isSweet) {
+                    if (
+                        isSweet !==
+                        undefined
+                    ) {
                         q.where(
                             "is_sweet",
-                            isSweet
+                            !!isSweet
                         )
                     }
                 }
