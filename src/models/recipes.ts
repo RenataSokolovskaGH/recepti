@@ -45,6 +45,7 @@ export class Recipes extends Model {
 
     ): IRecipeSchema {
         return {
+            recipeId: this.id,
             calories: this.calories,
             dietFlag: this.diet_flag,
             ingredients: this.ingredients,

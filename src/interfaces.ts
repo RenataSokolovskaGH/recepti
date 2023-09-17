@@ -26,6 +26,7 @@ export interface IRecipeDetailsSchema extends IRecipeSchema {
 }
 
 export interface IRecipeSchema extends IGetRecipesParams {
+    recipeId: number;
     avatar: string | null;
 }
 
