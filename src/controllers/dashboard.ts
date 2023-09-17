@@ -1,6 +1,6 @@
 import { errorCodes } from "../error-codes";
-import { IGetRecipesParams, RGetRecipeDetails, RGetRecipes } from "../interfaces";
-import { Recipes } from "../models";
+import { IGetRecipesParams, RGetMatchingRecipes, RGetRecipeDetails, RGetRecipes } from "../interfaces";
+import { MatchingRecipes, Recipes } from "../models";
 
 class DashboardCtl {
     public async getRecipes(
@@ -97,6 +97,30 @@ class DashboardCtl {
 
         return {
             recipeDetails: myRecipe.recipeDetailsSchema()
+        }
+    }
+
+    public async getMatchingRecipes(
+        recipeId: number
+
+    ): Promise<RGetMatchingRecipes> {
+        const matchingRecipes = await MatchingRecipes
+            .query()
+            .withGraphJoined('recipe')
+            .where(
+                'recipe_id',
+                recipeId
+            )
+            .orderBy(
+                "calories",
+                "desc"
+            )
+
+        return {
+            matchingRecipes:
+                matchingRecipes
+                    .filter(q => !!q.recipe)
+                    .map(q => q.recipe!.recipeSchema())
         }
     }
 }

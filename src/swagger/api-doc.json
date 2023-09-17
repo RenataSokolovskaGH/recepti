@@ -101,6 +101,46 @@
                }
             }
          }
+      },
+      "/api/dashboard/get-matching-recipes": {
+         "post": {
+            "tags": [
+               "Dashboard"
+            ],
+            "summary": "Get matching recipes according to the recipe id provided. If sweet one provided, a salty returned, and vise-versa",
+            "operationId": "getMatchingRecipes",
+            "requestBody": {
+               "content": {
+                  "application/json": {
+                     "schema": {
+                        "$ref": "#/components/schemas/GetMatchingRecipesRequest"
+                     }
+                  }
+               }
+            },
+            "responses": {
+               "200": {
+                  "description": "Success",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/GetMatchingRecipesResponse"
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "#/components/schemas/APIErrorResponse"
+                        }
+                     }
+                  }
+               }
+            }
+         }
       }
    },
    "components": {
@@ -170,6 +210,26 @@
             "properties": {
                "recipeDetails": {
                   "$ref": "#/components/schemas/RecipeDetailsSchema"
+               }
+            }
+         },
+         "GetMatchingRecipesRequest": {
+            "type": "object",
+            "properties": {
+               "recipeId": {
+                  "type": "number",
+                  "example": 27
+               }
+            }
+         },
+         "GetMatchingRecipesResponse": {
+            "type": "object",
+            "properties": {
+               "matchingRecipes": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "#/components/schemas/RecipeSchema"
+                  }
                }
             }
          },

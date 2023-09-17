@@ -71,4 +71,26 @@ export default {
             next(err);
         }
     },
+
+    getMatchingRecipes: async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+
+    ) => {
+        try {
+            const {
+                recipeId
+
+            } = req.body;
+
+            const result = await dashCtl.getMatchingRecipes(
+                recipeId
+            )
+            res.status(200).json(result);
+
+        } catch (err) {
+            next(err);
+        }
+    },
 }

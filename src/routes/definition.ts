@@ -26,6 +26,7 @@ const routes = {
     dashboard: {
         getRecipes: `${apiRoute}/dashboard/get-recipes`,
         getRecipeDetails: `${apiRoute}/dashboard/get-recipe-details`,
+        getMatchingRecipes: `${apiRoute}/dashboard/get-matching-recipes:`,
     }
 };
 

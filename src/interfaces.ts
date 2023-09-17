@@ -50,3 +50,7 @@ export interface ICreateServerInstanceParams {
     port: number;
     swaggerURI?: string;
 }
+
+export interface RGetMatchingRecipes {
+    matchingRecipes: IRecipeSchema[];
+}

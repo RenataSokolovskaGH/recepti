@@ -20,6 +20,8 @@ router.get(routeConstants.routes.root, (req, res) => res.send(errorCodes.Success
 
 router.post(routeConstants.routes.dashboard.getRecipes, dashboard.getRecipes);
 router.post(routeConstants.routes.dashboard.getRecipeDetails, dashboard.getRecipeDetails);
+router.post(routeConstants.routes.dashboard.getMatchingRecipes, dashboard.getMatchingRecipes);
+
 export {
     router
 }
