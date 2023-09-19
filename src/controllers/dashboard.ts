@@ -1,5 +1,5 @@
 import { errorCodes } from "../error-codes";
-import { IGetRecipesParams, RGetMatchingRecipes, RGetRecipeDetails, RGetRecipes } from "../interfaces";
+import { IGetRecipesParams, RGetRecipeDetails, RGetRecipes } from "../interfaces";
 import { MatchingRecipes, Recipes } from "../models";
 
 class DashboardCtl {
@@ -95,15 +95,6 @@ class DashboardCtl {
             throw errorCodes.InvalidRecipe;
         }
 
-        return {
-            recipeDetails: myRecipe.recipeDetailsSchema()
-        }
-    }
-
-    public async getMatchingRecipes(
-        recipeId: number
-
-    ): Promise<RGetMatchingRecipes> {
         const matchingRecipes = await MatchingRecipes
             .query()
             .withGraphJoined('recipe')
@@ -117,6 +108,8 @@ class DashboardCtl {
             )
 
         return {
+            recipeDetails: myRecipe.recipeDetailsSchema(),
+            
             matchingRecipes:
                 matchingRecipes
                     .filter(q => !!q.recipe)

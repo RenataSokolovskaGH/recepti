@@ -1,0 +1,394 @@
+[
+    {
+        "recipe_id": 1,
+        "matching_recipe_id": 7
+    },
+    {
+        "recipe_id": 1,
+        "matching_recipe_id": 10
+    },
+    {
+        "recipe_id": 2,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 2,
+        "matching_recipe_id": 12
+    },
+    {
+        "recipe_id": 3,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 3,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 4,
+        "matching_recipe_id": 29
+    },
+    {
+        "recipe_id": 4,
+        "matching_recipe_id": 28
+    },
+    {
+        "recipe_id": 5,
+        "matching_recipe_id": 31
+    },
+    {
+        "recipe_id": 5,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 6,
+        "matching_recipe_id": 24
+    },
+    {
+        "recipe_id": 6,
+        "matching_recipe_id": 10
+    },
+    {
+        "recipe_id": 7,
+        "matching_recipe_id": 1
+    },
+    {
+        "recipe_id": 7,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 8,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 8,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 9,
+        "matching_recipe_id": 13
+    },
+    {
+        "recipe_id": 9,
+        "matching_recipe_id": 23
+    },
+    {
+        "recipe_id": 10,
+        "matching_recipe_id": 1
+    },
+    {
+        "recipe_id": 10,
+        "matching_recipe_id": 4
+    },
+    {
+        "recipe_id": 11,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 11,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 12,
+        "matching_recipe_id": 23
+    },
+    {
+        "recipe_id": 12,
+        "matching_recipe_id": 29
+    },
+    {
+        "recipe_id": 13,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 13,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 14,
+        "matching_recipe_id": 31
+    },
+    {
+        "recipe_id": 14,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 15,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 15,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 16,
+        "matching_recipe_id": 13
+    },
+    {
+        "recipe_id": 16,
+        "matching_recipe_id": 7
+    },
+    {
+        "recipe_id": 17,
+        "matching_recipe_id": 31
+    },
+    {
+        "recipe_id": 17,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 18,
+        "matching_recipe_id": 10
+    },
+    {
+        "recipe_id": 18,
+        "matching_recipe_id": 24
+    },
+    {
+        "recipe_id": 19,
+        "matching_recipe_id": 31
+    },
+    {
+        "recipe_id": 19,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 20,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 20,
+        "matching_recipe_id": 4
+    },
+    {
+        "recipe_id": 21,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 21,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 22,
+        "matching_recipe_id": 31
+    },
+    {
+        "recipe_id": 22,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 23,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 23,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 24,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 24,
+        "matching_recipe_id": 12
+    },
+    {
+        "recipe_id": 25,
+        "matching_recipe_id": 31
+    },
+    {
+        "recipe_id": 25,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 26,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 26,
+        "matching_recipe_id": 12
+    },
+    {
+        "recipe_id": 27,
+        "matching_recipe_id": 23
+    },
+    {
+        "recipe_id": 27,
+        "matching_recipe_id": 21
+    },
+    {
+        "recipe_id": 28,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 28,
+        "matching_recipe_id": 12
+    },
+    {
+        "recipe_id": 29,
+        "matching_recipe_id": 4
+    },
+    {
+        "recipe_id": 29,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 30,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 30,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 31,
+        "matching_recipe_id": 7
+    },
+    {
+        "recipe_id": 31,
+        "matching_recipe_id": 23
+    },
+    {
+        "recipe_id": 32,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 32,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 33,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 33,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 34,
+        "matching_recipe_id": 12
+    },
+    {
+        "recipe_id": 34,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 35,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 35,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 36,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 36,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 37,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 37,
+        "matching_recipe_id": 4
+    },
+    {
+        "recipe_id": 38,
+        "matching_recipe_id": 28
+    },
+    {
+        "recipe_id": 38,
+        "matching_recipe_id": 10
+    },
+    {
+        "recipe_id": 39,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 39,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 40,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 40,
+        "matching_recipe_id": 12
+    },
+    {
+        "recipe_id": 41,
+        "matching_recipe_id": 29
+    },
+    {
+        "recipe_id": 41,
+        "matching_recipe_id": 23
+    },
+    {
+        "recipe_id": 42,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 42,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 43,
+        "matching_recipe_id": 10
+    },
+    {
+        "recipe_id": 43,
+        "matching_recipe_id": 13
+    },
+    {
+        "recipe_id": 44,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 44,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 45,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 45,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 46,
+        "matching_recipe_id": 6
+    },
+    {
+        "recipe_id": 46,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 47,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 47,
+        "matching_recipe_id": 18
+    },
+    {
+        "recipe_id": 48,
+        "matching_recipe_id": 9
+    },
+    {
+        "recipe_id": 48,
+        "matching_recipe_id": 16
+    },
+    {
+        "recipe_id": 49,
+        "matching_recipe_id": 27
+    },
+    {
+        "recipe_id": 49,
+        "matching_recipe_id": 9
+    }
+]

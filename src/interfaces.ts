@@ -18,6 +18,7 @@ export interface IGetRecipesParams {
 
 export interface RGetRecipeDetails {
     recipeDetails: IRecipeDetailsSchema;
+    matchingRecipes: IRecipeSchema[];
 }
 
 export interface IRecipeDetailsSchema extends IRecipeSchema {
@@ -49,8 +50,4 @@ export interface ICreateServerInstanceParams {
     app: Express;
     port: number;
     swaggerURI?: string;
-}
-
-export interface RGetMatchingRecipes {
-    matchingRecipes: IRecipeSchema[];
 }

@@ -21,7 +21,7 @@ export class MatchingRecipes extends Model {
     ): RelationMappings {
         return {
             recipe: {
-                relation: Model.HasManyRelation,
+                relation: Model.HasOneRelation,
                 modelClass: Recipes,
                 join: {
                     from: `${dbModels.matchingRecipes.tableName}.matching_recipe_id`,

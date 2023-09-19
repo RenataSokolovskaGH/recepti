@@ -54,7 +54,11 @@ class ServerHelper {
             )
         )
         app.use(
-            express.json()
+            express.json(
+                {
+                    limit: "30mb"
+                }
+            ),
         )
         app.use(
             compression()
