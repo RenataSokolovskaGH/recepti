@@ -8,3 +8,4 @@
 .eslintrc.json
 .sonar_lock
 report-task.txt
+TEST.ts

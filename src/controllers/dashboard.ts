@@ -14,7 +14,7 @@ class DashboardCtl {
 
     ): Promise<RGetRecipes> {
         const myRecipes = await Recipes
-            .query()
+            .query()           
             .where(
                 q => {
                     if (name) {
@@ -73,6 +73,7 @@ class DashboardCtl {
                 "calories",
                 "desc"
             )
+            .debug()
 
         return {
             recipes: myRecipes.map(q => q.recipeSchema())
@@ -106,6 +107,7 @@ class DashboardCtl {
                 "calories",
                 "desc"
             )
+            .debug()
 
         return {
             recipeDetails: myRecipe.recipeDetailsSchema(),

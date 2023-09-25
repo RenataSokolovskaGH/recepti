@@ -2,7 +2,6 @@ import express, { Express, NextFunction, Request, Response } from 'express';
 import http from 'http';
 import { Model } from 'objection';
 import { Knex } from 'knex';
-import userAgent from 'express-useragent';
 import compression from 'compression';
 import cors from 'cors';
 import { join } from 'path';
@@ -65,10 +64,7 @@ class ServerHelper {
         );
         app.use(
             cors()
-        );
-        app.use(
-            userAgent.express()
-        );
+        );       
 
         app.use(
             '*.html',
@@ -112,9 +108,7 @@ class ServerHelper {
 
                 ) {
                     res.send(errorCodes.ApiRouteNotFound);
-
-
-
+                    
                 } else {
                     let {
                         title,
